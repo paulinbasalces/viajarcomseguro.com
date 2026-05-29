@@ -74,3 +74,84 @@ dialog::backdrop { background: rgba(255,255,255,0.8); backdrop-filter: blur(4px)
 #fechar-modal { position: absolute; right: 20px; top: 20px; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-muted); }
 
 .footer-main { text-align: center; padding: 40px 0; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-color); }
+/* Footer Hub */
+.site-footer {
+    background-color: #FFFFFF;
+    border-top: 1px solid var(--border-color);
+    padding: 60px 0 20px;
+    margin-top: 80px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+}
+
+.link-column h4 {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.link-column a {
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: color 0.2s;
+}
+
+.link-column a:hover,
+.link-column a[aria-current="page"] {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.8rem;
+}
+
+.disclaimer {
+    color: #888888;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .footer-brand p {
+        max-width: 100%;
+    }
+}
