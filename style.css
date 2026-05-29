@@ -154,3 +154,11 @@ body.modal-open { overflow: hidden; }
     .card-footer { grid-template-columns: 1fr; }
     .link-card-oficial { justify-self: start; }
 }
+
+/* --- PÁGINAS INSTITUCIONAIS --- */
+.pagina-institucional { max-width: 820px; padding-top: 60px; padding-bottom: 80px; min-height: 65vh; }
+.pagina-institucional h1 { font-size: 2.4rem; line-height: 1.15; margin: 24px 0 20px; color: var(--text-main); font-weight: 850; letter-spacing: -0.5px; }
+.pagina-institucional h2 { font-size: 1.4rem; margin: 40px 0 16px; color: var(--accent-secondary); font-weight: 800; border-bottom: 1px solid var(--border-light); padding-bottom: 8px; }
+.pagina-institucional p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 18px; line-height: 1.7; font-weight: 500; }
+.link-voltar { color: var(--accent-primary); font-weight: 800; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; margin-bottom: 16px; transition: transform 0.2s, color 0.2s; background: var(--card-bg); padding: 8px 16px; border: 1px solid var(--border-light); border-radius: 8px; box-shadow: var(--shadow-sm); }
+.link-voltar:hover { color: var(--accent-secondary); transform: translateX(-4px); box-shadow: var(--shadow-md); border-color: var(--accent-secondary); }
