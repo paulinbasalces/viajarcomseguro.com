@@ -1,0 +1,47 @@
+[
+  {
+    "id": "seguros-promo",
+    "nome": "Seguros Promo",
+    "categoria": "Comparadores",
+    "emoji": "⚖️",
+    "dor_resolvida": "Compara franquias e preços de dezenas de seguradoras nacionais.",
+    "descricao": "Agregador que permite visualizar apólices lado a lado. Útil para identificar exclusões nas entrelinhas e garantir o melhor custo-benefício.",
+    "url": "https://www.segurospromo.com.br/"
+  },
+  {
+    "id": "assist-card",
+    "nome": "Assist Card",
+    "categoria": "Europa (Schengen)",
+    "emoji": "🇪🇺",
+    "dor_resolvida": "Emite certificado imediato válido para a imigração europeia.",
+    "descricao": "Garante a cobertura mínima exigida de 30 mil euros, com aplicativo próprio para acionamento médico sem necessidade de adiantar pagamentos.",
+    "url": "https://www.assistcard.com/br/"
+  },
+  {
+    "id": "safetywing",
+    "nome": "SafetyWing",
+    "categoria": "Nômades Digitais",
+    "emoji": "💻",
+    "dor_resolvida": "Seguro contínuo cobrado mensalmente, flexível para múltiplos países.",
+    "descricao": "Desenhado especificamente para nômades. Cobre viagens longas sem necessidade de saber a data de retorno. Funciona como assinatura.",
+    "url": "https://safetywing.com/"
+  },
+  {
+    "id": "portal-visa",
+    "nome": "Portal Benefícios Visa",
+    "categoria": "Cartões de Crédito",
+    "emoji": "💳",
+    "dor_resolvida": "Ativa o seguro viagem gratuito atrelado a passagens compradas com o cartão.",
+    "descricao": "Plataforma oficial para emitir o Bilhete de Seguro Viagem obrigatório antes do embarque. Requer que a taxa de embarque também seja paga no cartão.",
+    "url": "https://www.visa.com.br/portaldebeneficios"
+  },
+  {
+    "id": "portal-consular",
+    "nome": "Portal Consular Gov.br",
+    "categoria": "Documentos e Apoio",
+    "emoji": "🏛️",
+    "dor_resolvida": "Informa oficialmente exigências de vacinas, vistos e alertas de segurança.",
+    "descricao": "Ferramenta essencial do Itamaraty para verificar se o país de destino exige seguro específico ou documentação sanitária obrigatória.",
+    "url": "https://www.gov.br/mre/pt-br/assuntos/portal-consular"
+  }
+]

@@ -1,0 +1,10 @@
+viajar-com-seguro/
+├── index.html
+├── sobre.html
+├── privacidade.html
+├── style.css
+├── script.js
+├── dados.json
+├── robots.txt
+├── sitemap.xml
+└── manifest.json
