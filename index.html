@@ -3,68 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viajar com Seguro | Curadoria de Seguros e Assistência de Viagem</title>
-    <meta name="description" content="Compare e escolha o melhor seguro viagem. Curadoria de apólices, assistências e coberturas para lazer, intercâmbio, nômades e negócios.">
-    <link rel="canonical" href="https://viajarcomseguro.com/">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Viajar com Seguro">
-    <meta property="og:description" content="Curadoria independente de seguros de viagem e assistência internacional.">
-    <meta property="og:url" content="https://viajarcomseguro.com/">
-    <meta property="og:type" content="website">
-
+    <title>Viajar com Seguro | Curadoria para Viajantes</title>
+    <meta name="description" content="Compare e escolha o melhor seguro viagem sem barreiras ocultas.">
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- JSON-LD WebSite -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Viajar com Seguro",
-      "url": "https://viajarcomseguro.com/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://viajarcomseguro.com/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
 </head>
 <body>
-    <header class="header-main">
-        <div class="container">
-            <h1>🛡️ Viajar com Seguro</h1>
-            <p>Encontre a proteção adequada para o seu destino sem barreiras ocultas.</p>
-            <nav class="nav-links" aria-label="Navegação principal">
+    <nav class="top-nav">
+        <div class="container nav-content">
+            <div class="logo">🛡️ Viajar com Seguro</div>
+            <div class="nav-links">
                 <a href="sobre.html">Como escolhemos</a>
                 <a href="privacidade.html">Privacidade</a>
-            </nav>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container hero-content">
+            <span class="hero-tag">CURADORIA INDEPENDENTE · ATUALIZADO 2026</span>
+            <h1>Ferramentas certas para cada<br>decisão de viagem</h1>
+            
+            <div class="stats-grid">
+                <div class="stat-box" style="border-color: #E27D60;">
+                    <strong>8</strong>
+                    <span>Categorias de<br>jornadas</span>
+                </div>
+                <div class="stat-box" style="border-color: #85DCB0;">
+                    <strong>32</strong>
+                    <span>Ferramentas<br>e apólices</span>
+                </div>
+                <div class="stat-box" style="border-color: #41B3A3;">
+                    <strong>100%</strong>
+                    <span>Links oficiais e<br>auditados</span>
+                </div>
+            </div>
+
+            <div class="search-wrapper">
+                <input type="search" id="campo-busca" placeholder="Busque por destino, cobertura ou seguradora..." aria-label="Buscar ferramentas">
+                <button class="btn-search">Buscar</button>
+            </div>
+
+            <div class="quick-anchors" id="ancoras-container">
+                <!-- Âncoras geradas via JS -->
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="trust-blocks" aria-label="Nossos pilares">
-            <div class="trust-card">✅ Foco em Cobertura Real</div>
-            <div class="trust-card">🔍 Links Oficiais e Diretos</div>
-            <div class="trust-card">🌐 Respeito ao Tratado de Schengen</div>
-        </section>
-
-        <section class="search-section" aria-label="Pesquisa de seguros">
-            <input type="search" id="campo-busca" placeholder="Busque por destino, cobertura ou seguradora..." aria-label="Buscar seguros">
-        </section>
-
-        <section class="filters-section" aria-label="Filtros por jornada">
-            <div id="filtros-container" class="filtros-scroll">
-                <!-- Botões gerados via JS -->
-            </div>
-        </section>
-
-        <section class="results-section">
-            <div id="cards-container" class="cards-grid">
-                <!-- Cards gerados via JS -->
-            </div>
-        </section>
+    <main class="container content-main" id="content-sections">
+        <!-- Seções de categorias geradas via JS -->
     </main>
 
     <!-- Modal Editorial -->
@@ -75,10 +61,10 @@
         </div>
     </dialog>
 
-    <footer class="footer-main">
+    <footer class="site-footer">
         <div class="container">
-            <p>© 2026 Viajar com Seguro. Curadoria independente para viajantes.</p>
-            <p><small>Publicidade: Este portal pode conter links afiliados. A prioridade é sempre a precisão e a segurança do usuário.</small></p>
+            <p><strong>Viajar com Seguro</strong></p>
+            <p>Curadoria com foco em acessibilidade e precisão de informação.</p>
         </div>
     </footer>
 
