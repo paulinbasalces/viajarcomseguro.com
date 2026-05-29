@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viajar com Seguro | Curadoria de Apólices e Ferramentas</title>
-    <meta name="description" content="Curadoria independente de seguros viagem: compare coberturas para lazer, intercâmbio, esportes radicais, nômades digitais e assistências internacionais.">
+    <meta name="description" content="Curadoria independente de seguros viagem: compare coberturas para lazer, intercâmbio, esportes radicais e nômades digitais.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="https://viajarcomseguro.com/">
     <link rel="stylesheet" href="style.css">
     
     <meta property="og:type" content="website">
     <meta property="og:title" content="Viajar com Seguro | Proteja sua jornada">
-    <meta property="og:description" content="Filtre e acesse ferramentas úteis para contratar seguros sem barreiras ocultas ou jargões inacessíveis.">
+    <meta property="og:description" content="Filtre e acesse ferramentas úteis para contratar seguros sem barreiras ocultas.">
     <meta property="og:url" content="https://viajarcomseguro.com/">
     <meta property="og:locale" content="pt_BR">
 </head>
@@ -21,11 +21,16 @@
     <header class="cabecalho-site">
         <div class="container nav-bar">
             <a class="logotipo" href="./index.html" aria-label="Viajar com Seguro">Viajar <span>com Seguro</span></a>
+            
+            <div class="controles-a11y" aria-label="Controles de Acessibilidade">
+                <button type="button" id="btn-fonte-menos" class="btn-a11y" aria-label="Diminuir tamanho da fonte">A-</button>
+                <button type="button" id="btn-fonte-mais" class="btn-a11y" aria-label="Aumentar tamanho da fonte">A+</button>
+                <button type="button" id="btn-tema" class="btn-a11y" aria-label="Alternar tema claro e escuro">🌓</button>
+            </div>
         </div>
     </header>
 
     <main class="container" id="conteudo-principal">
-        
         <section class="hero">
             <p class="hero-kicker">Curadoria independente para viajantes</p>
             <h1 class="hero-title">A proteção exata para a sua jornada internacional</h1>
@@ -34,7 +39,7 @@
             <div class="hero-metricas" aria-label="Resumo da curadoria">
                 <span class="metrica-card metrica-ferramentas"><strong id="total-ferramentas">0</strong><small>ferramentas verificadas</small></span>
                 <span class="metrica-card metrica-jornadas"><strong id="total-categorias">0</strong><small>jornadas de viagem</small></span>
-                <span class="metrica-card metrica-cadastro"><strong>100%</strong><small>foco em clareza de cobertura</small></span>
+                <span class="metrica-card metrica-cadastro"><strong>100%</strong><small>foco em clareza</small></span>
             </div>
             
             <div class="busca-container" role="search">
@@ -60,13 +65,13 @@
             <div>
                 <p class="section-kicker">Como escolhemos</p>
                 <h2 id="titulo-curadoria">Foco em resolver problemas reais, sem jargões</h2>
-                <p>Nossas indicações traduzem as entrelinhas. O portal não emite apólices, mas conecta você diretamente às plataformas oficiais, sinalizando quais "pontos ocultos" (como exigência de franquia ou idade máxima) cada ferramenta ajuda a contornar.</p>
+                <p>Nossas indicações traduzem as entrelinhas. O portal não emite apólices, mas conecta você diretamente às plataformas oficiais, sinalizando quais "pontos ocultos" cada ferramenta ajuda a contornar.</p>
             </div>
             <ul class="criterios-lista" aria-label="Critérios de seleção">
-                <li class="criterio-card criterio-utilidade"><strong>Cobertura Útil</strong><span>Resolve necessidades críticas, como repatriação ou extravio.</span></li>
-                <li class="criterio-card criterio-acesso"><strong>Fontes Oficiais</strong><span>Links direcionam exclusivamente para as seguradoras.</span></li>
-                <li class="criterio-card criterio-seguranca"><strong>Sem Barreiras</strong><span>Priorizamos apólices com telemedicina e atendimento em português.</span></li>
-                <li class="criterio-card criterio-decisao"><strong>Decisão Clara</strong><span>Filtros pensados no momento da sua viagem.</span></li>
+                <li class="criterio-card criterio-utilidade"><strong>Cobertura Útil</strong><span>Resolve necessidades críticas.</span></li>
+                <li class="criterio-card criterio-acesso"><strong>Fontes Oficiais</strong><span>Links diretos para seguradoras.</span></li>
+                <li class="criterio-card criterio-seguranca"><strong>Sem Barreiras</strong><span>Prioridade para telemedicina em português.</span></li>
+                <li class="criterio-card criterio-decisao"><strong>Decisão Clara</strong><span>Filtros pensados para o momento da viagem.</span></li>
             </ul>
         </section>
 
@@ -74,7 +79,6 @@
         <div id="lista-ferramentas"></div>
     </main>
 
-    <!-- Modal Baseado no Trabalho e Futuro -->
     <div id="modal-overlay" class="modal-overlay hidden" onclick="fecharAoClicarFora(event)" aria-hidden="true">
         <div id="modal-ferramenta" class="modal-content" role="dialog" aria-modal="true" aria-labelledby="artigo-titulo">
             <button type="button" class="btn-fechar" onclick="fecharTodosModais()" aria-label="Fechar janela">✕</button>
@@ -108,7 +112,6 @@
 
             <div class="acoes-ferramenta">
                 <a id="artigo-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primario">Acessar Plataforma Oficial</a>
-                
                 <div class="share-buttons">
                     <p class="share-title">Compartilhar ferramenta útil:</p>
                     <div class="share-icons" id="botoes-compartilhamento"></div>
@@ -125,7 +128,7 @@
         <div class="container">
             <article class="sobre-portal-rodape">
                 <h2>Hub de Proteção e Planejamento Internacional</h2>
-                <p>O Viajar com Seguro organiza e simplifica o acesso a apólices e ferramentas de viagem. Nosso objetivo é garantir que você encontre coberturas adequadas para esportes, estudos ou lazer, sem cair em entrelinhas. A curadoria é editorial e focada em resolver pontos ocultos nas contratações de seguros.</p>
+                <p>O Viajar com Seguro organiza e simplifica o acesso a apólices e ferramentas de viagem. Nosso objetivo é garantir que você encontre coberturas adequadas sem cair em entrelinhas. A curadoria é editorial e focada em resolver pontos ocultos nas contratações de seguros.</p>
             </article>
 
             <div class="rodape-main">
