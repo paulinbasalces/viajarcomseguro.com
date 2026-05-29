@@ -1,30 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
     let baseDeDados = [];
     let categoriaAtiva = 'Todas';
+    const htmlElement = document.documentElement;
     const SITE_URL = 'https://viajarcomseguro.com/';
 
-    // Metadados Editoriais para enriquecer os modais baseados na categoria
-    const categoriasMeta = {
-        'Comparadores e Tradicionais': {
-            melhorPara: 'Quem precisa avaliar dezenas de operadoras lado a lado para encontrar o menor preço ou a melhor franquia médica.',
-            cuidado: 'O preço baixo pode esconder franquias altas para acionamento de acidentes simples.'
-        },
-        'Europa (Schengen)': {
-            melhorPara: 'Viajantes com destino ao continente europeu que precisam obrigatoriamente do certificado de 30 mil euros para a imigração.',
-            cuidado: 'Verifique se a seguradora cobre os custos via telemedicina ou se exige reembolso posterior.'
-        },
-        'Esportes e Aventura': {
-            melhorPara: 'Mochileiros, esquiadores ou mergulhadores. Apólices comuns quase sempre excluem resgate em esportes.',
-            cuidado: 'Revise se a modalidade exata do seu esporte (ex: mergulho acima de 20m) está na lista de aceitação.'
-        },
-        'Cartões de Crédito': {
-            melhorPara: 'Economizar na emissão primária da apólice caso a passagem integral tenha sido comprada no cartão elegível.',
-            cuidado: 'O benefício não é automático. Você DEVE emitir o bilhete no portal da bandeira ANTES de embarcar.'
-        },
-        'Nômades Digitais': {
-            melhorPara: 'Profissionais que viajam por tempo indeterminado e necessitam de planos flexíveis sem data de volta.',
-            cuidado: 'Coberturas preventivas (como exames de rotina) geralmente não estão inclusas neste formato.'
+    // --- Acessibilidade: Tema e Fonte ---
+    const temaSalvo = localStorage.getItem('tema');
+    if (temaSalvo === 'dark') htmlElement.setAttribute('data-theme', 'dark');
+
+    document.getElementById('btn-tema').addEventListener('click', () => {
+        if (htmlElement.getAttribute('data-theme') === 'dark') {
+            htmlElement.removeAttribute('data-theme');
+            localStorage.setItem('tema', 'light');
+        } else {
+            htmlElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('tema', 'dark');
         }
+    });
+
+    let fontScale = parseInt(localStorage.getItem('fontScale'), 10) || 100;
+    const atualizarFonte = () => {
+        htmlElement.style.fontSize = fontScale + '%';
+        localStorage.setItem('fontScale', fontScale);
+    };
+    atualizarFonte();
+
+    document.getElementById('btn-fonte-mais').addEventListener('click', () => {
+        if (fontScale < 130) {
+            fontScale += 10;
+            atualizarFonte();
+        }
+    });
+
+    document.getElementById('btn-fonte-menos').addEventListener('click', () => {
+        if (fontScale > 90) {
+            fontScale -= 10;
+            atualizarFonte();
+        }
+    });
+    // ------------------------------------
+
+    const categoriasMeta = {
+        'Comparadores e Tradicionais': { melhorPara: 'Quem precisa avaliar operadoras lado a lado para encontrar o menor preço.', cuidado: 'Preços muito baixos podem esconder franquias altas para acionamento médico.' },
+        'Europa (Schengen)': { melhorPara: 'Viajantes que precisam obrigatoriamente do certificado de 30 mil euros para a imigração.', cuidado: 'Verifique se a seguradora cobre os custos via telemedicina ou exige reembolso posterior.' },
+        'Esportes e Aventura': { melhorPara: 'Mochileiros ou esportistas. Apólices comuns quase sempre excluem resgate em esportes.', cuidado: 'Revise se a modalidade exata do seu esporte está na lista de aceitação.' },
+        'Cartões de Crédito': { melhorPara: 'Economizar na emissão primária da apólice caso a passagem tenha sido comprada no cartão.', cuidado: 'O benefício não é automático. Você DEVE emitir o bilhete no portal da bandeira ANTES de embarcar.' },
+        'Nômades Digitais': { melhorPara: 'Profissionais que viajam por tempo indeterminado e necessitam de planos flexíveis.', cuidado: 'Coberturas preventivas (exames de rotina) geralmente não estão inclusas neste formato.' }
     };
 
     const seletor = {
@@ -50,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             abrirFerramentaDaUrl();
         })
         .catch(erro => {
-            seletor.listaFerramentas.innerHTML = '<div style="text-align:center; padding: 40px; color: #64748B;">Erro ao carregar o diretório de seguros.</div>';
+            seletor.listaFerramentas.innerHTML = '<div style="text-align:center; padding: 40px; color: var(--text-muted);">Erro ao carregar o diretório de seguros.</div>';
         });
 
     seletor.busca.addEventListener('input', () => {
@@ -107,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         seletor.statusResultados.textContent = `${filtradas.length} de ${baseDeDados.length} apólices disponíveis exibidas.`;
 
         if (!filtradas.length) {
-            seletor.listaFerramentas.innerHTML = '<div style="text-align:center; padding: 40px; color: #64748B;">Nenhum seguro encontrado com este perfil.</div>';
+            seletor.listaFerramentas.innerHTML = '<div style="text-align:center; padding: 40px; color: var(--text-muted);">Nenhum seguro encontrado com este perfil.</div>';
             return;
         }
 
@@ -131,13 +152,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="card-editorial">${item.descricao}</p>
                     </div>
                     <div class="card-footer">
-                        <button type="button" class="btn-card-abrir" onclick="abrirModalFerramenta('${item.id}')">Explicar Cobertura</button>
-                        <a class="link-card-oficial" href="${item.url}" target="_blank" rel="noopener noreferrer">Plataforma oficial ➔</a>
+                        <button type="button" class="btn-card-abrir" onclick="abrirModalFerramenta('${item.id}')">Ver análise rápida</button>
+                        <a class="link-card-oficial" href="${item.url}" target="_blank" rel="noopener noreferrer">Plataforma oficial</a>
                     </div>
                 </article>
             `).join('');
 
-            // Injeção In-feed AdSense após categorias
             const ad = index < arr.length - 1 ? `<div class="area-adsense ads-home"><p class="ads-label">Publicidade</p></div>` : '';
 
             return `
@@ -193,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = document.createElement('button');
             btn.className = 'btn-primario';
             btn.style.width = '100%';
-            btn.style.background = '#1E293B';
+            btn.style.background = 'var(--text-main)';
             btn.textContent = 'Compartilhar Link';
             btn.onclick = () => navigator.share({ title: ferramenta.nome, text: ferramenta.dor_resolvida, url: urlCompartilhamento });
             container.appendChild(btn);
