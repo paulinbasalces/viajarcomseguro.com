@@ -185,6 +185,24 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('artigo-cuidado').textContent = meta.cuidado;
         document.getElementById('artigo-link').href = ferramenta.url;
 
+        // Lógica do botão reportar erro
+        const btnReportar = document.getElementById('btn-reportar');
+        if (btnReportar) {
+            btnReportar.textContent = 'Reportar link quebrado';
+            btnReportar.onclick = () => {
+                const mensagem = `Link quebrado: ${ferramenta.nome}\nURL: ${ferramenta.url}\nContato: contato@viajarcomseguro.com`;
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(mensagem).then(() => {
+                        btnReportar.textContent = 'Mensagem copiada';
+                    }).catch(() => {
+                        btnReportar.textContent = 'Envie para contato@viajarcomseguro.com';
+                    });
+                } else {
+                    btnReportar.textContent = 'Envie para contato@viajarcomseguro.com';
+                }
+            };
+        }
+
         renderizarCompartilhamento(ferramenta);
 
         document.getElementById('modal-overlay').classList.remove('hidden');
