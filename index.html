@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viajar com Seguro | Curadoria de Apólices e Ferramentas</title>
@@ -9,13 +17,48 @@
     <link rel="canonical" href="https://viajarcomseguro.com/">
     <link rel="stylesheet" href="style.css">
     
+    <!-- Open Graph & Twitter Cards -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Viajar com Seguro | Proteja sua jornada">
-    <meta property="og:description" content="Filtre e acesse ferramentas úteis para contratar seguros sem barreiras ocultas.">
+    <meta property="og:description" content="Filtre e acesse ferramentas úteis para contratar seguros sem barreiras ocultas ou jargões inacessíveis.">
+    <meta property="og:image" content="https://viajarcomseguro.com/capa.jpeg">
     <meta property="og:url" content="https://viajarcomseguro.com/">
     <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- PWA & Mobile -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ECE7DC">
+    <link rel="apple-touch-icon" href="icone-192.png">
+    
+    <!-- JSON-LD (SEO Estruturado) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Viajar com Seguro",
+      "url": "https://viajarcomseguro.com/",
+      "description": "Curadoria independente de seguros viagem e assistência internacional.",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Viajar com Seguro",
+        "url": "https://viajarcomseguro.com/"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://viajarcomseguro.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <a class="skip-link" href="#lista-ferramentas">Ir para ferramentas</a>
 
     <header class="cabecalho-site">
@@ -31,6 +74,7 @@
     </header>
 
     <main class="container" id="conteudo-principal">
+        
         <section class="hero">
             <p class="hero-kicker">Curadoria independente para viajantes</p>
             <h1 class="hero-title">A proteção exata para a sua jornada internacional</h1>
@@ -43,16 +87,30 @@
             </div>
             
             <div class="busca-container" role="search">
-                <label class="sr-only" for="campo-busca">Pesquisar seguros e coberturas</label>
+                <label class="sr-only" for="campo-busca">Pesquisar no portal</label>
                 <div class="busca-form">
                     <input id="campo-busca" type="search" placeholder="Busque por: Europa, esportes, nômades, reembolso..." autocomplete="off">
                     <div class="busca-acoes">
                         <button type="button" id="btn-limpar-busca" class="btn-busca secundario">Limpar</button>
+                        <button type="button" id="btn-google-busca" class="btn-busca google">Buscar no Google</button>
                     </div>
                 </div>
+                <p id="google-search-status" class="google-search-status">A busca local filtra as ferramentas na hora. A busca Google pode ser monetizada quando você conectar seu mecanismo próprio.</p>
             </div>
             
             <nav id="bento-menu" class="bento-grid-container" aria-label="Navegação rápida por categorias"></nav>
+        </section>
+
+        <!-- Painel de Busca Google Integrada -->
+        <section id="google-search-panel" class="google-search-panel hidden" aria-labelledby="google-search-title">
+            <div class="google-search-header">
+                <div>
+                    <p class="section-kicker">Busca Google do portal</p>
+                    <h2 id="google-search-title">Resultados complementares</h2>
+                </div>
+                <button type="button" id="btn-fechar-google" class="btn-busca secundario">Fechar</button>
+            </div>
+            <div id="google-resultados"></div>
         </section>
 
         <div class="espaco-respiro"></div>
@@ -65,13 +123,13 @@
             <div>
                 <p class="section-kicker">Como escolhemos</p>
                 <h2 id="titulo-curadoria">Foco em resolver problemas reais, sem jargões</h2>
-                <p>Nossas indicações traduzem as entrelinhas. O portal não emite apólices, mas conecta você diretamente às plataformas oficiais, sinalizando quais "pontos ocultos" cada ferramenta ajuda a contornar.</p>
+                <p>Nossas indicações traduzem as entrelinhas. O portal não emite apólices, mas conecta você diretamente às plataformas oficiais, sinalizando quais "pontos ocultos" cada ferramenta ajuda a contornar. Confira as condições finais na provedora.</p>
             </div>
             <ul class="criterios-lista" aria-label="Critérios de seleção">
-                <li class="criterio-card criterio-utilidade"><strong>Cobertura Útil</strong><span>Resolve necessidades críticas.</span></li>
-                <li class="criterio-card criterio-acesso"><strong>Fontes Oficiais</strong><span>Links diretos para seguradoras.</span></li>
-                <li class="criterio-card criterio-seguranca"><strong>Sem Barreiras</strong><span>Prioridade para telemedicina em português.</span></li>
-                <li class="criterio-card criterio-decisao"><strong>Decisão Clara</strong><span>Filtros pensados para o momento da viagem.</span></li>
+                <li class="criterio-card criterio-utilidade"><strong>Cobertura Útil</strong><span>Resolve necessidades críticas da viagem.</span></li>
+                <li class="criterio-card criterio-acesso"><strong>Fontes Oficiais</strong><span>Links diretos para as seguradoras.</span></li>
+                <li class="criterio-card criterio-seguranca"><strong>Sem Barreiras</strong><span>Prioridade para suporte em português.</span></li>
+                <li class="criterio-card criterio-decisao"><strong>Decisão Clara</strong><span>Filtros pensados para o seu destino.</span></li>
             </ul>
         </section>
 
@@ -79,7 +137,8 @@
         <div id="lista-ferramentas"></div>
     </main>
 
-<div id="modal-overlay" class="modal-overlay hidden" onclick="fecharAoClicarFora(event)" aria-hidden="true">
+    <!-- Modal Padrão UX 2026 -->
+    <div id="modal-overlay" class="modal-overlay hidden" onclick="fecharAoClicarFora(event)" aria-hidden="true">
         <div id="modal-ferramenta" class="modal-content" role="dialog" aria-modal="true" aria-labelledby="artigo-titulo">
             <button type="button" class="btn-fechar" onclick="fecharTodosModais()" aria-label="Fechar janela">✕</button>
             
@@ -92,7 +151,7 @@
             </div>
 
             <div class="dor-box">
-                <strong>Resolve o problema:</strong>
+                <strong>Análise Estratégica:</strong>
                 <p id="artigo-dor"></p>
             </div>
 
@@ -100,11 +159,11 @@
                 <p id="artigo-descricao"></p>
                 <dl class="detalhes-editoriais">
                     <div>
-                        <dt>Ideal Para</dt>
+                        <dt>Ideal para</dt>
                         <dd id="artigo-melhor-para"></dd>
                     </div>
                     <div>
-                        <dt>Ponto de Atenção</dt>
+                        <dt>Atenção antes de usar</dt>
                         <dd id="artigo-cuidado"></dd>
                     </div>
                 </dl>
@@ -130,21 +189,23 @@
         <div class="container">
             <article class="sobre-portal-rodape">
                 <h2>Hub de Proteção e Planejamento Internacional</h2>
-                <p>O Viajar com Seguro organiza e simplifica o acesso a apólices e ferramentas de viagem. Nosso objetivo é garantir que você encontre coberturas adequadas sem cair em entrelinhas. A curadoria é editorial e focada em resolver pontos ocultos nas contratações de seguros.</p>
+                <p>O Viajar com Seguro organiza ferramentas online para quem precisa escolher apólices sem cair em entrelinhas complexas. Nossa curadoria engloba opções para nômades digitais, estudantes em intercâmbio, esportistas e viagens a lazer. A curadoria é editorial e independente: cada link leva para a plataforma oficial da seguradora indicada.</p>
             </article>
 
             <div class="rodape-main">
-                <p><strong>Viajar com Seguro</strong> &copy; 2026. Planejamento com precisão.</p>
-                <p>A responsabilidade pelas apólices é exclusiva das seguradoras. Este portal atua como facilitador de informação.</p>
+                <p><strong>Viajar com Seguro</strong> &copy; 2026. Feito para o viajante prevenido.</p>
+                <p>Publicidade pode aparecer em áreas identificadas. Não possuímos vínculo comercial exclusivo com as marcas citadas.</p>
                 <nav class="links-rodape" aria-label="Links institucionais">
                     <a href="sobre.html">Sobre a curadoria</a>
                     <a href="privacidade.html">Privacidade</a>
-                    <a href="https://trabalhoefuturo.com/" target="_blank">Trabalho e Futuro</a>
+                    <a href="robots.txt">Robôs</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                    <a href="https://trabalhoefuturo.com/" target="_blank" rel="noopener noreferrer">Trabalho e Futuro</a>
                 </nav>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1.0"></script>
 </body>
 </html>
