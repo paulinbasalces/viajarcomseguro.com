@@ -2,6 +2,195 @@
   {
     "id": "seguros-promo",
     "nome": "Seguros Promo",
+    "categoria": "Comparadores",
+    "emoji": "⚖️",
+    "dor_resolvida": "Compara franquias e preços de múltiplas seguradoras em segundos.",
+    "descricao": "Uma das maiores plataformas de comparação do Brasil. Permite analisar lado a lado coberturas de DMH (Despesas Médicas e Hospitalares), seguro bagagem e cancelamento de voo de marcas como Assist Card, Universal Assistance e GTA.",
+    "url": "https://www.segurospromo.com.br/"
+  },
+  {
+    "id": "compara-concorrencia",
+    "nome": "Compara Online",
+    "categoria": "Comparadores",
+    "emoji": "🔍",
+    "dor_resolvida": "Filtra apólices focadas no menor preço com foco em viagens curtas.",
+    "descricao": "Plataforma de agregação simplificada ideal para viajantes que buscam cumprimento estrito de requisitos de entrada de destinos internacionais sem adicionar opcionais caros.",
+    "url": "https://www.comparaonline.com.br/seguro-viagem"
+  },
+  {
+    "id": "real-seguros",
+    "nome": "Real Seguro Viagem",
+    "categoria": "Comparadores",
+    "emoji": "🛡️",
+    "dor_resolvida": "Oferece suporte personalizado pós-venda para acionamento de sinistros.",
+    "descricao": "O primeiro comparador de seguro viagem do Brasil. Destaca-se pelo atendimento humano e auxílio direto no processo de reembolso com as seguradoras.",
+    "url": "https://www.seguroviagem.srv.br/"
+  },
+  {
+    "id": " Allianz-travel",
+    "nome": "Allianz Travel",
+    "categoria": "Europa (Schengen)",
+    "emoji": "🇪🇺",
+    "dor_resolvida": "Garante atendimento médico de alta complexidade na rede própria europeia.",
+    "descricao": "Antiga Mondial Assistance, possui uma das redes hospitalares mais robustas da Europa. Emite o certificado de Schengen com cobertura médica padrão ouro superior aos 30 mil euros exigidos.",
+    "url": "https://www.allianztravel.com.br/"
+  },
+  {
+    "id": "assist-card-schengen",
+    "nome": "Assist Card Europa",
+    "categoria": "Europa (Schengen)",
+    "emoji": "✈️",
+    "dor_resolvida": "Atendimento médico 100% em português via aplicativo por telemedicina.",
+    "descricao": "Uma das bandeiras mais tradicionais do mundo. O plano para a Europa elimina a necessidade de pagar consultas do próprio bolso para posterior reembolso na maioria dos hospitais do continente.",
+    "url": "https://www.assistcard.com/br"
+  },
+  {
+    "id": "universal-assistance",
+    "nome": "Universal Assistance",
+    "categoria": "Europa (Schengen)",
+    "emoji": "🌍",
+    "dor_resolvida": "Inclui autogestão de consultas médicas diretamente pelo smartphone.",
+    "descricao": "Oferece excelente custo-benefício para o bloco europeu. O aplicativo oficial permite agendar atendimento médico residencial ou por telemedicina sem filas de espera.",
+    "url": "https://www.universal-assistance.com/br-pt/home.html"
+  },
+  {
+    "id": "gta-assist",
+    "nome": "GTA (Global Travel Assistance)",
+    "categoria": "EUA e Canadá",
+    "emoji": "🇺🇸",
+    "dor_resolvida": "Disponibiliza coberturas altíssimas essenciais para o inflacionado sistema médico americano.",
+    "descricao": "Focada em coberturas corporativas e de lazer robustas. Indispensável para os Estados Unidos, onde uma simples diária hospitalar pode facilmente ultrapassar dezenas de milhares de dólares.",
+    "url": "https://www.gta.com.br/"
+  },
+  {
+    "id": "intermac-assistance",
+    "nome": "Intermac Assistance",
+    "categoria": "EUA e Canadá",
+    "emoji": "🍁",
+    "dor_resolvida": "Seguro especializado para idosos e viajantes com condições médicas preexistentes nos EUA.",
+    "descricao": "Oferece planos com tetos elevados para despesas médicas decorrentes de doenças crônicas ou preexistentes, um dos maiores pontos de exclusão do mercado tradicional.",
+    "url": "https://intermacassistance.com/"
+  },
+  {
+    "id": "chubb-seguros",
+    "nome": "Chubb Seguro Viagem",
+    "categoria": "EUA e Canadá",
+    "emoji": "🏙️",
+    "dor_resolvida": "Garante indenização direta para cancelamentos de voos e extravio de bagagens em conexões americanas.",
+    "descricao": "A maior empresa de seguros de propriedade e responsabilidade civil do mundo listada em bolsa. Excelente estrutura operacional de apoio logístico na América do Norte.",
+    "url": "https://www.chubb.com/br-pt/"
+  },
+  {
+    "id": "safetywing-nomad",
+    "nome": "SafetyWing Nomad Insurance",
+    "categoria": "Nômades Digitais",
+    "emoji": "💻",
+    "dor_resolvida": "Modelo de assinatura mensal flexível que funciona em múltiplos países simultaneamente.",
+    "descricao": "Projetado por e para nômades digitais. Permite contratação mesmo se você já iniciou a viagem e inclui cobertura parcial no seu país de origem em visitas curtas.",
+    "url": "https://safetywing.com/"
+  },
+  {
+    "id": "world-nomads",
+    "nome": "World Nomads",
+    "categoria": "Nômades Digitais",
+    "emoji": "🎒",
+    "dor_resolvida": "Cobre mais de 150 modalidades de esportes de aventura e atividades radicais.",
+    "descricao": "A escolha favorita de mochileiros e criadores de conteúdo de viagem. Altamente robusto, cobre cenários complexos como resgate de helicóptero em montanhas e perda de equipamentos fotográficos.",
+    "url": "https://www.worldnomads.com/br/"
+  },
+  {
+    "id": "insure-my-trip",
+    "nome": "InsureMyTrip",
+    "categoria": "Nômades Digitais",
+    "emoji": "🗺️",
+    "dor_resolvida": "Agregador internacional de apólices globais fora do mercado emissor brasileiro.",
+    "descricao": "Ideal para viajantes que realizam trajetos de volta ao mundo e necessitam de planos emitidos por seguradoras americanas ou europeias com tetos de cobertura milionários.",
+    "url": "https://www.insuremytrip.com/"
+  },
+  {
+    "id": "visa-infinite-insurance",
+    "nome": "Visa Infinite Seguro Viagem",
+    "categoria": "Cartões de Crédito",
+    "emoji": "💳",
+    "dor_resolvida": "Fornece seguro de viagem gratuito para o titular do cartão e familiares diretos.",
+    "descricao": "Seguro altamente robusto válido mundialmente. É obrigatório comprar as passagens inteiramente com o cartão Visa Infinite e emitir o bilhete de seguro no portal oficial antes do embarque.",
+    "url": "https://www.visa.com.br/portaldebeneficios"
+  },
+  {
+    "id": "mastercard-platinum-travel",
+    "nome": "Mastercard Platinum e Black",
+    "categoria": "Cartões de Crédito",
+    "emoji": "💰",
+    "dor_resolvida": "Emite o Certificado de Schengen de forma automatizada e gratuita.",
+    "descricao": "Benefício embutido para variantes Platinum e Black. Protege contra despesas médicas, emergenciais e oferece repatriação médica. Exige emissão prévia do bilhete de seguro.",
+    "url": "https://www.mastercard.com.br/pt-br/consumidores/encontre-seu-cartao.html"
+  },
+  {
+    "id": "elo-flex-seguro",
+    "nome": "Elo Nanquim e Diners",
+    "categoria": "Cartões de Crédito",
+    "emoji": "💎",
+    "dor_resolvida": "Permite escolher o seguro viagem como um benefício customizável ativo na apólice.",
+    "descricao": "Através da plataforma Elo Flex, o usuário pode parametrizar coberturas de viagem internacional de alta qualidade emitidas em parceria com a seguradora AIG.",
+    "url": "https://www.elo.com.br/beneficios"
+  },
+  {
+    "id": "assist-card-student",
+    "nome": "Assist Card Student",
+    "categoria": "Intercâmbio",
+    "emoji": "🎓",
+    "dor_resolvida": "Cumpre as exigências médicas de universidades e vistos de longa permanência.",
+    "descricao": "Planos desenhados para estadias de 3 a 12 meses no exterior. Incluem assistência psicológica e acompanhamento em caso de necessidade de trancamento de matrícula por motivos de saúde.",
+    "url": "https://www.assistcard.com/br"
+  },
+  {
+    "id": "gta-student-global",
+    "nome": "GTA Student Global",
+    "categoria": "Intercâmbio",
+    "emoji": "📚",
+    "dor_resolvida": "Custo reduzido para estudantes com manutenção de coberturas de urgência elevadas.",
+    "descricao": "Garante atendimento odontológico emergencial e consultas médicas de rotina obrigatórias exigidas por vistos estudantis como o F1 nos EUA e vistos europeus.",
+    "url": "https://www.gta.com.br/"
+  },
+  {
+    "id": "sulamerica-viagem",
+    "nome": "SulAmérica Seguro Viagem",
+    "categoria": "Seguro Viagem Nacional",
+    "emoji": "🇧🇷",
+    "dor_resolvida": "Suplementa o atendimento do plano de saúde regional fora da sua área de cobertura.",
+    "descricao": "Ideal para viagens interestaduais no Brasil. Garante atendimento em hospitais privados de ponta e cobre custos de passagens para familiares caso o viajante seja internado.",
+    "url": "https://www.sulamerica.com.br/"
+  },
+  {
+    "id": "porto-seguro-nacional",
+    "nome": "Porto Seguro Viagem Brasil",
+    "categoria": "Seguro Viagem Nacional",
+    "emoji": "🚗",
+    "dor_resolvida": "Garante assistência 24h para extravio de bagagens e imprevistos em hotéis nacionais.",
+    "descricao": "Excelente opção para viagens aéreas ou rodoviárias dentro do território nacional. Conta com a confiabilidade de atendimento emergencial da rede Porto.",
+    "url": "https://www.portoseguro.com.br/seguro-viagem"
+  },
+  {
+    "id": "gov-consular-apoio",
+    "nome": "Itamaraty - Portal Consular",
+    "categoria": "Assistência e Apoio ao Viajante",
+    "emoji": "🏛️",
+    "dor_resolvida": "Fornece a localização de embaixadas e canais de emergência do governo brasileiro.",
+    "descricao": "Guia oficial indispensável. Ajuda a entender o que fazer em caso de perda de passaporte, prisões, desastres naturais ou necessidade de repatriação emergencial.",
+    "url": "https://www.gov.br/mre/pt-br/assuntos/portal-consular"
+  },
+  {
+    "id": "anvisa-viajante",
+    "nome": "Anvisa - Saúde do Viajante",
+    "categoria": "Assistência e Apoio ao Viajante",
+    "emoji": "💉",
+    "dor_resolvida": "Emissão do CIVP (Certificado Internacional de Vacinação ou Medicação).",
+    "descricao": "Plataforma oficial para emitir gratuitamente a comprovação da vacina contra febre amarela, exigência obrigatória para entrada em mais de 100 países.",
+    "url": "https://www.gov.br/anvisa/pt-br/assuntos/viajante"
+  },
+  {
+    "id": "seguros-promo",
+    "nome": "Seguros Promo",
     "categoria": "Comparadores e Tradicionais",
     "emoji": "⚖️",
     "dor_resolvida": "Compara dezenas de seguradoras nacionais lado a lado.",
